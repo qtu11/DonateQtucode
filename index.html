@@ -37,7 +37,7 @@
     <meta property="og:type" content="acticle">
     <meta property="og:locale" content="vi-VN" />
     <meta property="og:title" content="Profile Thông Tin Donate - qtusdev.Com">
-    <link rel="shortcut icon" href="https://i.imgur.com/mruOsLm.jpg" />
+    <link rel="shortcut icon" href="https://i.imgur.com/mruOsLm.jpg" >
     <meta property="og:image" content="https://files.catbox.moe/wh3h9y.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/styles/style.css" />
@@ -361,14 +361,17 @@
     <script src="./assets/js/js.cookie.js"></script>
     <script src="./assets/layui/hoa-roi.js"></script>
     <script>
-    const Wussun_Music = ["https:/thanhdieu.com/files/random-music.php", ];
+    const Wussun_Music = ["https://thanhdieu.com/files/random-music.php"];
     let rand = Math.floor(Math.random() * Wussun_Music.length);
     const audio = new Audio(Wussun_Music[rand]);
     function wussunplay() {
-        audio.play()
+        audio.play();
     }
-    document.addEventListener("click",wussunplay()), audio.addEventListener("ended", function() {
-        rand = (rand + 1) % Wussun_Music.length, audio.src = Wussun_Music[rand], audio.play()
+    document.addEventListener("click", wussunplay);
+    audio.addEventListener("ended", function() {
+        rand = (rand + 1) % Wussun_Music.length;
+        audio.src = Wussun_Music[rand];
+        audio.play();
     });
     let avatar = 'https://files.catbox.moe/4mw3mm.jpg';
     let fullname = 'Nguyễn Quang Tú';
