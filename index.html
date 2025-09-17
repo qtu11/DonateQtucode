@@ -362,17 +362,20 @@
     <script src="./assets/layui/hoa-roi.js"></script>
     <script>
     const Wussun_Music = ["https://thanhdieu.com/files/random-music.php"];
-    let rand = Math.floor(Math.random() * Wussun_Music.length);
-    const audio = new Audio(Wussun_Music[rand]);
-    function wussunplay() {
-        audio.play();
-    }
-    document.addEventListener("click", wussunplay);
-    audio.addEventListener("ended", function() {
-        rand = (rand + 1) % Wussun_Music.length;
-        audio.src = Wussun_Music[rand];
-        audio.play();
-    });
+let rand = Math.floor(Math.random() * Wussun_Music.length);
+const audio = new Audio(Wussun_Music[rand]);
+audio.volume = 0.3; // Set volume to 30% (adjust as needed)
+
+function wussunplay() {
+    audio.play();
+}
+
+document.addEventListener("click", wussunplay);
+audio.addEventListener("ended", function() {
+    rand = (rand + 1) % Wussun_Music.length;
+    audio.src = Wussun_Music[rand];
+    audio.play();
+});
     let avatar = 'https://files.catbox.moe/4mw3mm.jpg';
     let fullname = 'Nguyễn Quang Tú';
     let facebook = 'https://www.facebook.com/tu.quangg.195068/';
